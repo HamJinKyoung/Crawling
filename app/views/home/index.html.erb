@@ -1,0 +1,5 @@
+<h1>네이버 실시간 검색어 순위</h1>
+
+<% for i in 0 ... @ranking.size %>
+  <%= @ranking[i][:rank] %> 위 : <%= @ranking[i][:keyword] %> <br>
+<% end %>
