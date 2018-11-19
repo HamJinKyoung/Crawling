@@ -14,5 +14,10 @@ class HomeController < ApplicationController
         }
     end
     
+    
+    img = Nokogiri::HTML(open("https://news.naver.com/main/hotissue/sectionList.nhn?sid1=101&mid=hot&viewType=pc&cid=996387&nh=20181119102924"))
+    @img_url = img.css('.thumb a img').map{|i| i['src']}
+    
+    
   end
 end

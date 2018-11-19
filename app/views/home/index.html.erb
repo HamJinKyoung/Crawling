@@ -3,3 +3,11 @@
 <% for i in 0 ... @ranking.size %>
   <%= @ranking[i][:rank] %> 위 : <%= @ranking[i][:keyword] %> <br>
 <% end %>
+
+<hr>
+
+<h2>이미지도 긁어올 수 있어!</h2>
+
+<% for i in 0 ... @img_url.size %>
+  <img src="<%= @img_url[i] %>"></img><br>
+<% end %>
